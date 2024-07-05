@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    /* color: #ffffff; */
+}
+
+/* Section styling */
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+section h2 {
+    margin-bottom: 20px;
+}
+
+/* Gaya untuk buku-buku */
+.books-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px auto;
+    width: 100%; /* Lebar menyesuaikan layar dengan sedikit ruang di tepi */
+    max-width: 1700px; /* Batasi lebar maksimal */
+    height: 100px; /* Tinggi otomatis menyesuaikan konten */
+    margin-top: -30px;
+}
+.book {
+    background-color: #f4f4f4;
+    /* border: 1px solid #ddd; */
+    border-radius: 5px;
+    overflow: hidden;
+    width: 170px;
+    text-align: center;
+}
+
+.book img {
+    max-width: 140%;
+    height: auto;
+}
+
+.book-info {
+    padding: 10px;
+}
+
+.book-info h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    margin-top: -5px;
+    color: #002C61;
+}
+
+.book-info p {
+    font-size: 0.9em;
+    color: #555;
+    text-align: left;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.read-more:hover {
+    background-color: #45a049;
+}
+
+
+.popup-container {
+    display: none;
+    width: 700px;
+    height: 400px;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #5e5e5e;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+
+.popup-container h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #002C61; /* Warna teks judul */
+    font-size: 18px; /* Ukuran font judul */
+}
+.popup-container h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #002C61; /* Warna teks judul */
+    font-size: 15px; /* Ukuran font judul */
+}
+
+.popup-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #002C61;
+    margin-right: 5px; /* Ukuran font label checkbox */
+}
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.checkbox-column {
+    /* flex: 5%; */
+    margin-right: 20px; /* Jarak antar kolom */
+}
+
+.checkbox-column label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px; /* Ukuran font label checkbox */
+}
+
+/* Gaya untuk tombol "Advanced Search" */
+#advancedSearchBtn {
+    display: block;
+    /* margin: 20px auto; Atur margin agar tombol berada di tengah */
+    margin: 30px 100px 30px ;
+    float: right;
+    /* margin-right: 100px; */
+    padding: 20px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align:center;
+    background-color: #002C61;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#advancedSearchBtn:hover {
+    background-color: #f2700f;
+}
+
+/* CSS tambahan lainnya sesuai kebutuhan */
+#closeAdvancedSearch {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 70px;
+    cursor: pointer;
+    color: #000000;
+}
+
+.apply-filters {
+    text-align: center;
+    margin-top: 130px; /* Sesuaikan jarak atas sesuai kebutuhan */
+    width: 100%; /* Menjadikan tombol lebar 100% dari container */
+}
+
+.apply-filters input[type="submit"] {
+    width: 100%; /* Menjadikan tombol lebar 100% dari container */
+    padding: 10px; /* Sesuaikan padding sesuai kebutuhan */
+    background-color: #cecccc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold; /* Membuat teks tebal */
+}
+.apply-filters input[type="submit"]:hover {
+    background-color: #002C61; /* Warna latar saat hover */
+}
+
+
+/* Footer styles */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background: linear-gradient(135deg, #004080, #002C61);
+    color: #ffffff;
+    margin-top: 20px; /* Ensure footer is spaced from the main content */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-info, .footer-terms, .footer-shortcuts {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.footer-info h4, .footer-terms h4, .footer-shortcuts h4 {
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-info ul, .footer-terms ul, .footer-shortcuts ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-info ul li, .footer-terms ul li, .footer-shortcuts ul li {
+    margin-bottom: 10px;
+}
+
+.footer-info ul li a, .footer-terms ul li a, .footer-shortcuts ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-info ul li a:hover, .footer-terms ul li a:hover, .footer-shortcuts ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-logo img {
+    height: 50px;
+    margin-right: 20px;
+}
